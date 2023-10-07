@@ -1,63 +1,26 @@
-\documentclass[a4paper,12pt]{report}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{csquotes}
-\usepackage{tabularx}
-\usepackage[top=2.5cm,bottom=2.5cm,left=3.5cm,right=2.5cm]{geometry}
-
-% Fancy headers surrouding chapter titles
-\usepackage[Bjornstrup]{fncychap}
-
-
-\usepackage[backend=bibtex,citestyle=alphabetic,bibstyle=authoryear]{biblatex}
-%\addbibresource{./bibliography/bibliography.bib}
+\include{document_setup}
 
 \begin{document}
 
-\begin{titlepage}
-	\center
-
-	\rule{\linewidth}{1pt} % Horizontal line
-
-	\vspace{2cm}
-
-	\Large \textbf{
-		The Markdown format: \\ \vspace{0.2cm} When flexibility clashes with standardization
-	}
-
-	\vspace{2cm}
-
-	\large \textbf{ André Madeira Cortes }
-
-	\vspace{12cm}
-
-	Article written for the course \\ "STIC-B415 - Architecture des systèmes d'information" \\
-
-	\vspace{0.8cm}
-
-	Université Libre de Bruxelles\\
-	MA-STIC \\
-	Academic Year 2023-2024
-
-	\rule{\linewidth}{1pt} % Horizontal line
-\end{titlepage}
+\include{title_page}
 
 \pagenumbering{gobble}
-\newpage
+
+\begin{minipage}{\linewidth} % Force ToC and LoF on same page
 \tableofcontents
-\newpage
+\filbreak
 \listoffigures
+\end{minipage}
+
 \newpage
 
 \pagenumbering{arabic}
 
-\addcontentsline{toc}{chapter}{Introduction}
-\chapter*{Introduction}
-
-\chapter*{Some chapter}
-
-\chapter*{Conclusion}
+\include{chapters/1-introduction}
+\include{chapters/2-history}
+\include{chapters/3-proliferation}
+\include{chapters/4-efforts}
+\include{chapters/5-conclusion}
 
 %Bibliography
 % Add it to the Table of Contents
