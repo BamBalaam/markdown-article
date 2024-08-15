@@ -1,16 +1,34 @@
+% Document format
 \documentclass[a4paper,12pt]{report}
-
+\usepackage[
+    top=2.5cm, bottom=2.5cm, left=3.5cm, right=2.5cm,
+    marginparwidth=0cm
+]{geometry}
+\renewcommand{\baselinestretch}{1.5}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[top=2.5cm,bottom=2.5cm,left=3.5cm,right=2.5cm]{geometry}
-
-\usepackage{hyperref}
-\usepackage{graphicx}
-\graphicspath{ {./images/} }
-
-% Fancy headers surrouding chapter titles
-\usepackage[Bjornstrup]{fncychap}
+\usepackage{fontspec}
+\linespread{1.5}
 
 % Handle bibliography
 \usepackage[backend=bibtex,citestyle=alphabetic,bibstyle=authoryear]{biblatex}
 \addbibresource{./bibliography/bibliography.bib}
+
+% Chapter title formatting
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]
+{\normalfont\Huge\bfseries}{\thechapter}{10pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{-15pt}{0pt}
+
+% Other package imports
+\usepackage{epigraph}
+\usepackage{nonumonpart}
+\usepackage{glossaries}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage[bottom]{footmisc}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
