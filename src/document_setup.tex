@@ -11,7 +11,10 @@
 \linespread{1.5}
 
 % Handle bibliography
-\usepackage[backend=bibtex,citestyle=alphabetic,bibstyle=authoryear]{biblatex}
+\usepackage[
+    backend=biber, style=authortitle, defernumbers=true, backref=true, block=none, hyperref=true
+]{biblatex}
+\setlength\bibitemsep{2\itemsep}
 \addbibresource{./bibliography/bibliography.bib}
 
 % Chapter title formatting
@@ -21,14 +24,9 @@
 \titlespacing*{\chapter}{0pt}{-15pt}{0pt}
 
 % Other package imports
-\usepackage{epigraph}
-\usepackage{nonumonpart}
-\usepackage{glossaries}
 \usepackage{enumitem}
 \usepackage{indentfirst}
-\usepackage{float}
 \usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage[bottom]{footmisc}
+\usepackage{float}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
