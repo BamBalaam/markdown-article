@@ -1,11 +1,7 @@
 # markdown-article
 
-Article about Markdown, its strengths and weaknesses 
+Article about Markdown: where it came from, what it became, and issues surrounding its lack of standardization.
 
-## Status
+## Compiled PDF Output
 
-This article is as of yet unfinished due to lack of time. Submitting it to get feedback from teacher and assistant.
-
-## Output
-
-Final PDF is found on the releases section, thanks to Github Actions.
+Final compiled PDF is found on the releases section, thanks to Github Actions.
