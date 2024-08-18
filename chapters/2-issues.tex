@@ -22,45 +22,30 @@ most of them unfortunately incompatible with each other.
 \section{Blind spots}
 
 Creators of alternative Markdown implementations list several blind spots and issues in the original Markdown specification in order to
-justify their creations. Listed below is a non-exhaustive list of the most reoccurring ones:\newline
+justify their creations. Listed below is a non-exhaustive list of the most reoccurring ones:
 
-\textbf{The number of space characters required in order to distinguish elements of a sub-list in a list}\newline
-
-xxx\newline
-
-\textbf{Whether blank lines are required or not after a block quote or header}\newline
-
-xxx\newline
-
-\textbf{Is a space character allowed or not when creating inline links}\newline
-
-xxx\newline
-
-\textbf{}\newline
-
-xxx\newline
-
-\textbf{}\newline
-
-xxx\newline
-
-\textbf{}\newline
-
-xxx\newline
-
-\newpage
+\begin{itemize}
+    \item What is the number of space characters required in order to distinguish elements of a sub-list in a list?
+    \item Are blank lines required or not after a block quote or header?
+    \item Are space characters allowed or not when creating inline links?
+    \item What parts of Markdown get interpreted into `<p>' tags in HTML?
+    \item What markers in the syntax make list elements change from bullet points into numbers? (i.e. the difference between itemizing
+    and enumerating)
+    \item How to separate two consecutive blockquotes?
+    \item How to handle reference links, inline or at the outer level?
+\end{itemize}
 
 \section{Missing features}
 
 Users of Markdown gradually felt that its simplicity was a crutch, given that they really wanted to used this syntax language but several
-features were missing, in their opinion. In chapter \ref{chap:proliferation}, we'll address how these missing features were addressed, but
+features were missing, in their opinion. In chapter \ref{chap:proliferation}, we'll address how these missing features were tackled, but
 in the meantime here is a list of reoccurring issues users reported:
 
 \begin{itemize}
     \item Limited formatting options (lack of tables, footnotes, task lists, syntax highlighting for code blocks, and others)
     \item Lack of accessibility (complex documents tend to be tough to structure for blind users for example);
-    \item No support for macros or variables, although the original spec outlines that ``curly braces'' (the characters ``\{'' and ``\}''
-    are left as unused markers for that usage);
+    \item No support for macros or variables (although the original spec outlines that ``curly braces'' - the characters ``\{'' and ``\}''
+    - are left as unused markers for that usage);
     \item Lack of metadata capabilities.
 \end{itemize}
 
@@ -71,6 +56,15 @@ a language for the web, as a minified way to see HTML, but as users started to u
 HTML was deemed too restrictive of a format. For this use-case, for example, they would prefer a more ``presentable'' format to be stored
 for posterity, or for dissemination to colleagues and management, such as PDF or DOC.\newline
 
-Various projects emerged in order to do so, the most famous of which being Pandoc\footcite{pandoc}.
+Various projects emerged in order to do so, the most famous of which being Pandoc\footcite{pandoc}. Pandoc is described as "primarily a Markdown
+interpreter with several output formats: HTML, LATEX, ConTEXt, DocBook, ODF, OOXML, other LMLs such as AsciiDoc, reStructured-
+Text and Textile (...) Moreover it extends the syntax of Markdown, introducing new elements and providing customization for the elements already
+available in the reference implementation." \footcite{dominici2014overview} \newline
 
-\footcite{dominici2014overview}
+Pandoc, in addition to allowing users to use Markdown to generate many output formats other than HTML, includes a trove of syntax extensions,
+such as document metadata, footnotes, tables, mathematical equations, citations and bibliographies, and many more. This means that using LaTeX
+as an interlingua, scientific articles can be written while having a simple Markdown document as a source. This flexible toolkit meant that
+it was no longer compulsory to learn a much more complicated syntax such as LaTeX in order to be able to participate in the scientific community,
+where it was (and still is) the de facto standard. All these aspects generated a lot of traction for Pandoc and its creator, and the project
+became extremely famous in the open source community. It is no wonder that its creator became one of the proponents for the standardization of
+Markdown (see next chapter for more details).
