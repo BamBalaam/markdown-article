@@ -17,7 +17,7 @@ With time, one of Markdown's strengths, it's simplicity, also became one of its 
 \end{itemize}
 
 These issues led to various implementations and syntaxes appearing all over the web-space (see chapter \ref{chap:proliferation}),
-most of them incompatible with each other.
+most of them unfortunately incompatible with each other.
 
 \section{Blind spots}
 
@@ -48,18 +48,32 @@ xxx\newline
 
 xxx\newline
 
+\newpage
+
 \section{Missing features}
 
+Users of Markdown gradually felt that its simplicity was a crutch, given that they really wanted to used this syntax language but several
+features were missing, in their opinion. In chapter \ref{chap:proliferation}, we'll address how these missing features were addressed, but
+in the meantime here is a list of reoccurring issues users reported:
+
 \begin{itemize}
-    \item Limited formatting options
-    \item Lack of tables and footnotes
-    \item Lack of accessibility
-    \item No support for Macros or Variables
-    \item Lack of metadata
-    \item GFM: task lists, tables, and syntax highlighting for code blocks
+    \item Limited formatting options (lack of tables, footnotes, task lists, syntax highlighting for code blocks, and others)
+    \item Lack of accessibility (complex documents tend to be tough to structure for blind users for example);
+    \item No support for macros or variables, although the original spec outlines that "curly braces" (the characters ``\{'' and ``\}''
+    are left as unused markers for that usage);
+    \item Lack of metadata capabilities.
 \end{itemize}
 
 \section{Output formats}
+
+As mentioned above, many users were interested in getting something else than HTML out of Markdown. At its core, Markdown was thought as
+a language for the web, as a minified way to see HTML, but as users started to use Markdown for other things such as code documentation,
+HTML was deemed too restrictive of a format. For this use-case, for example, they would prefer a more "presentable" format to be stored
+for posterity, or for dissemination to colleagues and management, such as PDF or DOC.\newline
+
+Various projects emerged in order to do so, the most famous of which being Pandoc\footcite{pandoc}.
+
+\footcite{dominici2014overview}
 
 % TODO:
 % Discuss Pandoc
