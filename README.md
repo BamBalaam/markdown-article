@@ -1,6 +1,7 @@
 # markdown-article
 
-Article about Markdown: where it came from, what it became, and issues surrounding its lack of standardization.
+This article aims to explore the issues arising from the lack of standardization of Markdown, a lightweight markup language,
+and the role and influence of it (and its many variants) in various fields.
 
 ## Compiled PDF Output
 
